@@ -1,15 +1,14 @@
-# GatePlane Template Repository
-
-This repository serves as a template for all code created by GatePlane.
-
-Specifically, it handles:
-* Elastic V2 Licensing with REUSE tooling
-* Pre-Commit with General Code Hygiene standards and License Header addition
-* License Clause in the `README.md` (below)
-
----
+# Terraform Test Modules
+Terraform modules used for E2E testing of the Plugins
 
 ![License: ElasticV2](https://img.shields.io/badge/ElasticV2-green?style=flat-square&label=license&cacheSeconds=3600&link=https%3A%2F%2Fwww.elastic.co%2Flicensing%2Felastic-license)
+
+The terraform modules provided are:
+* [`./tokens`](./tokens): Creates Vault/OpenBao Entities, authenticates them using userpass backend and outputs tokens.
+* [`./gateplane-mock`](./gateplane-mock): Mounts the [`mock` plugin](https://github.com/gateplane-io/vault-plugins/tree/main/cmd/mock), that provides all approval-based functionality for testing.
+
+
+---
 
 ## License
 
