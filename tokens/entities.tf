@@ -11,7 +11,8 @@
 resource "vault_identity_entity" "this" {
   for_each = local.entity_identifiers
 
-  name = "${split(":", each.value)[0]}-${split(":", each.value)[1]}"
+  name     = "${split(":", each.value)[0]}-${split(":", each.value)[1]}"
+  policies = var.entity_groups[split(":", each.value)[0]]["policies"]
 
   metadata = {
     // TODO: add in var.entity_groups maps

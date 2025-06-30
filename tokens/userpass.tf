@@ -24,7 +24,6 @@ resource "vault_generic_endpoint" "userpass_user" {
 
   data_json = jsonencode({
     password = local.userpass_password
-    policies = var.entity_groups[split(":", each.value)[0]]["policies"]
   })
   ignore_absent_fields = true
 }
