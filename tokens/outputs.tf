@@ -29,3 +29,9 @@ output "policy_map" {
     user_type => user_map["policies"]
   }
 }
+
+
+output "mount" {
+  description = "The Auth Method resource"
+  value       = vault_auth_backend.userpass
+}
